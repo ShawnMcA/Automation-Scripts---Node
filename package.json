@@ -1,0 +1,16 @@
+{
+  "name": "Automation Scripts",
+  "version": "1.0.0",
+  "description": "Automation Scripts",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "test"
+  },
+  "type": "module",
+  "author": "Shawn McAllister 2021",
+  "license": "ISC",
+  "dependencies": {
+    "robotjs": "^0.6.0"
+  }
+}
