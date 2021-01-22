@@ -16,10 +16,14 @@ const setFontSize = () => {
   robot.keyTap('enter');
 }
 
-const writeText = () => {
-  robot.typeString('Testing'); // NotePad String: Enter Notepad text
+const writeText = textInput => {
+  robot.typeString(textInput);
 }
 
-openNotePad();
-setFontSize();
-writeText();
+const openNewNotepad = textInput => {
+  openNotePad();
+  setFontSize();
+  writeText(textInput);
+}
+
+export default openNewNotepad;

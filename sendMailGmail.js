@@ -12,22 +12,26 @@ const goToGmail = () => {
   robot.keyTap('enter');
 }
 
-const sendMail = () => {
+const sendMail = (recipient, subject, body) => {
   robot.keyTap('c');
-  robot.typeString(''); // [Update] Email here: Enter recipient email address
+  robot.typeString(recipient);
   robot.keyTap('tab');
   robot.keyTap('tab');
-  robot.typeString('Just Testing!'); // Email Subject: Enter email subject
+  robot.typeString(subject);
   robot.keyTap('tab');
   robot.typeString('Hello!');
   robot.keyTap('enter');
   robot.keyTap('enter');
-  robot.typeString('This is an automated message.'); // Email Body: Enter email body
+  robot.typeString(body);
   robot.keyToggle('control', 'down');
   robot.keyTap('enter');
   robot.keyToggle('control', 'up');
 }
 
-openChrome();
-goToGmail();
-setTimeout(sendMail, 4000);
+const sendGmail = (recipient, subject, body) => {
+  openChrome();
+  goToGmail();
+  setTimeout(() => sendMail(recipient, subject, body), 4000);
+}
+
+export default sendGmail;

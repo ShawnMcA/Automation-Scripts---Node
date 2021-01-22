@@ -1,5 +1,5 @@
 {
-  "name": "Automation Scripts",
+  "name": "automation-scripts",
   "version": "1.0.0",
   "description": "Automation Scripts",
   "main": "index.js",
@@ -11,6 +11,8 @@
   "author": "Shawn McAllister 2021",
   "license": "ISC",
   "dependencies": {
-    "robotjs": "^0.6.0"
+    "express": "^4.17.1",
+    "robotjs": "^0.6.0",
+    "save": "^2.4.0"
   }
 }
